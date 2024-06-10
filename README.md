@@ -44,7 +44,7 @@ In trivial, The differences between the original and the modified are hyperparam
 **Figure 3:** *Result of the original pipeline with default settings*
 
 Anyway, the core problem is that Imagic pipeline does not work well with Stable Diffusion, unlike Imagen.
-It means that if you try to fully preserve important characteristics in a image such as identity or face, then overfitting happens.
+It means that if you try to fully preserve important characteristics in an image such as identity or face, then overfitting happens.
 Meanwhile, if you use a trick like controling diffusion steps to prevent such overfitting, then the prompt loses the power and only minor changes occur.
 e.g.
 1. a ginger cat => the same cat with gray or white fur: relatively easy;
