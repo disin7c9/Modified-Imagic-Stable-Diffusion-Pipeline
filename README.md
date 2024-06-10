@@ -24,11 +24,11 @@ If "show_progress = False (default)" during training, it will takes about 1 hour
 However some code lines are equivalent to the contents of [this page](https://medium.com/@chongdashu/papers-decoded-imagic-text-based-real-image-editing-with-diffusion-models-b1bda8b2532a), but there are dummy or missing parts.
 So I edited them.
 
-1.1. a bit of efficiency improvement
+2. A bit of efficiency improvement
 
-2. the pipeline samples images and displays them to show how things are going, if you want.
+3. The pipeline samples images and displays them to show how things are going, if you want.
 
-etc. I didn't edited any of the original annotations in py file.
+etc: I didn't edited any of the original annotations in py file.
 
 
 ## Performances
@@ -46,9 +46,9 @@ In trivial, The differences between the original and the modified are hyperparam
 Anyway, the core problem is that Imagic pipeline does not work well with Stable Diffusion, unlike Imagen.
 It means that if you try to fully preserve important characteristics in a image such as identity or face, then overfitting happens.
 Meanwhile, if you use a trick like controling diffusion steps to prevent such overfitting, then the prompt loses the power and only minor changes occur.
-(e.g.
+e.g.
 1. a ginger cat => the same cat with gray or white fur: relatively easy;
-2. a cat => the same cat dressed like a musketeer or a medieval knight: maybe impossible or poor quality;)
+2. a cat => the same cat dressed like a musketeer or a medieval knight: maybe impossible or poor quality;
 
 The reason is probably that Stable diffusion deals with the latent of an image in the semantic latent space, while Imagen dealing with an image in the pixel space.
 
