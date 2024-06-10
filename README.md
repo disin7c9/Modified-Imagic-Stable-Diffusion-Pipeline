@@ -7,7 +7,7 @@ The original version was introduced in huggingface diffusers community examples.
 ## Imagic
 
 ![Imagic examples](./assets/imagic_with_imagen.png)
-**Figure1:** *Examples of Imagic with Imagen.*
+**Figure 1:** *Examples of Imagic with Imagen.*
 
 
 ## How to use
@@ -20,9 +20,10 @@ If "show_progress = False (default)" during training, it will takes about 1 hour
 
 ## Modifications
 
-1. The py file from ![github - huggingface/diffusers](https://github.com/huggingface/diffusers/blob/main/examples/community/imagic_stable_diffusion.py) is noted that their pipeline is "modeled after the textual_inversion.py / train_dreambooth.py and the work of justinpinkney".
+1. The py file from [github - huggingface/diffusers](https://github.com/huggingface/diffusers/blob/main/examples/community/imagic_stable_diffusion.py) is noted that their pipeline is "modeled after the textual_inversion.py / train_dreambooth.py and the work of justinpinkney".
 However some code lines are equivalent to the contents of [this page](https://medium.com/@chongdashu/papers-decoded-imagic-text-based-real-image-editing-with-diffusion-models-b1bda8b2532a), but there are dummy or missing parts.
 So I edited them.
+
 1.1. a bit of efficiency improvement
 
 2. the pipeline samples images and displays them to show how things are going, if you want.
@@ -33,14 +34,14 @@ etc. I didn't edited any of the original annotations in py file.
 ## Performances
 
 ![Imagic examples](./assets/ginger_cat_merge.jpg)
-**Figure2:** *Examples*
+**Figure 2:** *Examples*
 
 The original pipeline with default settings prints awful images. 
-On the other hand, the modified one produces better images but quite disappointing.
+On the other hand, the modified one produces better images, but quite disappointing.
 In trivial, The differences between the original and the modified are hyperparameters, schedulers, and the 1st modification.
 
 ![Imagic examples](./assets/orange_cat-horz.jpg)
-**Figure3:** *Result of the original pipeline with default settings*
+**Figure 3:** *Result of the original pipeline with default settings*
 
 Anyway, the core problem is that Imagic pipeline does not work well with Stable Diffusion, unlike Imagen.
 It means that if you try to fully preserve important characteristics in a image such as identity or face, then overfitting happens.
@@ -53,8 +54,8 @@ The reason is probably that Stable diffusion deals with the latent of an image i
 
 Perhaps this is why the author's of Imagic paper only presented inanimate object examples for their applications of Stable Diffusion like this:
 
-![Imagic examples](./assets/imagic_with_imagen.png)
-**Figure:** *Examples of Imagic with Stable Diffusion.*
+![Imagic examples](./assets/imagic_with_stable_diffusion.png)
+**Figure 4:** *Examples of Imagic with Stable Diffusion.*
 
 
 ## References
